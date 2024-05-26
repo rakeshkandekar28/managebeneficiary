@@ -24,7 +24,7 @@ const ManageBeneficiary = (props) => {
         <>
             <div className="text-center">
             {!showAddComp ? 
-                <Button onClick={() => handleAddNewBeneficiary()}>Add Beneficiary</Button>
+                <Button onClick={() => handleAddNewBeneficiary()}>Add New Beneficiary</Button>
              :  <Button onClick={() => setShowAddComp(false)}>Back to Manage</Button>}
              </div>
             {showAddComp ? 
