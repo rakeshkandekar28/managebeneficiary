@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { Button } from "antd";
+import { Button, Popconfirm, message } from "antd";
 import { createBeneficiary, updateBeneficiary } from "../actions/beneficiary";
 
 const AddBeneficiary = (props) => {
@@ -14,7 +14,7 @@ const AddBeneficiary = (props) => {
 
   useEffect(() => {
     setBeneficiaryDetails(selectedBeneficiary)
-  }, [selectedBeneficiary])
+  }, [selectedBeneficiary]);
 
   const setBeneficiaryDetails = (ele) => {
 
@@ -36,10 +36,10 @@ const AddBeneficiary = (props) => {
 
       dispatch(createBeneficiary(formvalue))
         .then(data => {
-
+          message.success("Beneficiary Saved Successfully!",1)
           reset();
           setShowAddComp(false)
-        
+          
         })
         .catch(e => {
           console.log(e);
@@ -58,6 +58,7 @@ const AddBeneficiary = (props) => {
      
       dispatch(updateBeneficiary(updatedData))
         .then(response => {
+          message.success("Beneficiary Updated Successfully!",1)
           reset();
           setselectedBeneficiary(null)
           setShowAddComp(false)
@@ -118,7 +119,16 @@ const AddBeneficiary = (props) => {
           {errors.actype?.type === 'required' && <p role="alert" className="error">Account Type is required</p>}
         </div>
         <div className="text-right">
-          <Button type="submit" className="btn btn-success" onClick={handleSubmit(onSubmit)}>{selectedBeneficiary ? 'Update' : 'Submit'}</Button>
+        <Popconfirm
+        title='Submit the Beneficiary'
+        description="Are you sure to Submit this Beneficiary?"
+        onConfirm={handleSubmit(onSubmit)}
+        okText="Yes"
+        cancelText="No"
+      >
+        <Button type="submit" className="btn btn-success">{selectedBeneficiary ? 'Update' : 'Submit'}</Button>
+      </Popconfirm>
+          {/* <Button type="submit" className="btn btn-success" onClick={}></Button> */}
         </div>
       </form>
 

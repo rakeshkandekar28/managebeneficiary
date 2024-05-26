@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Button, Popconfirm } from "antd";
+import { Button, Popconfirm, message } from "antd";
 import {
-  retrieveBeneficiary,
   deleteBeneficiary,
 } from "../actions/beneficiary";
 import './style.css';
-import { Link } from "react-router-dom";
 import ShowDetailsModal from "./showDetailsModal";
 
 
@@ -28,6 +26,7 @@ const BeneficiaryList = (props) => {
     e.stopPropagation()
     dispatch(deleteBeneficiary(ele.id))
       .then((data) => {
+        message.success("Beneficiary Deleted Successfully!",1)
         console.log(data)
       })
       .catch((err) => {

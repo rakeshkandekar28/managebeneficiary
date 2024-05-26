@@ -3,7 +3,6 @@ import {
   RETRIEVE_BENEFICIARY,
   UPDATE_BENEFICIARY,
   DELETE_BENEFICIARY,
-  DELETE_ALL_BENEFICIARY,
 } from "../actions/types";
 
 const initialState = [];
@@ -22,9 +21,6 @@ const beneficiaryReducer = (beneficiary = initialState, action) => {
 
     case DELETE_BENEFICIARY:
       return beneficiary.filter(({ id }) => id !== payload.id);
-
-    case DELETE_ALL_BENEFICIARY:
-      return [];
 
     default:
       return beneficiary;
