@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/managebeneficiary/static/css/main.c5eccc52.chunk.css",
+    "main.js": "/managebeneficiary/static/js/main.72aa7a9c.chunk.js",
+    "main.js.map": "/managebeneficiary/static/js/main.72aa7a9c.chunk.js.map",
+    "runtime-main.js": "/managebeneficiary/static/js/runtime-main.155620a4.js",
+    "runtime-main.js.map": "/managebeneficiary/static/js/runtime-main.155620a4.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/managebeneficiary/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.18bef860.chunk.js": "/managebeneficiary/static/js/2.18bef860.chunk.js",
+    "static/js/2.18bef860.chunk.js.map": "/managebeneficiary/static/js/2.18bef860.chunk.js.map",
+    "static/js/3.e9fba66d.chunk.js": "/managebeneficiary/static/js/3.e9fba66d.chunk.js",
+    "static/js/3.e9fba66d.chunk.js.map": "/managebeneficiary/static/js/3.e9fba66d.chunk.js.map",
+    "index.html": "/managebeneficiary/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/managebeneficiary/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.c5eccc52.chunk.css.map": "/managebeneficiary/static/css/main.c5eccc52.chunk.css.map",
+    "static/js/2.18bef860.chunk.js.LICENSE.txt": "/managebeneficiary/static/js/2.18bef860.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.155620a4.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.18bef860.chunk.js",
+    "static/css/main.c5eccc52.chunk.css",
+    "static/js/main.72aa7a9c.chunk.js"
+  ]
+}
