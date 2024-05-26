@@ -1,0 +1,24 @@
+table{
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+th,td{
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 5px;
+}
+
+.actionwrapper {
+    display: flex;
+    justify-content: center;
+}
+.viewaction,.editaction,.deleteaction{
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.error{
+    color: #f00;
+    font-size: 14px;
+}
